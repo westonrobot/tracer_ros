@@ -127,10 +127,6 @@ void EncodeTracerStatusMsgToUART(const TracerStatusMessage *msg, uint8_t *buf, u
             buf[4] = UART_FRAME_MOTOR1_DRIVER_STATUS_ID;
         else if (msg->motor_driver_status_msg.motor_id == TRACER_MOTOR2_ID)
             buf[4] = UART_FRAME_MOTOR2_DRIVER_STATUS_ID;
-        else if (msg->motor_driver_status_msg.motor_id == TRACER_MOTOR3_ID)
-            buf[4] = UART_FRAME_MOTOR3_DRIVER_STATUS_ID;
-        else if (msg->motor_driver_status_msg.motor_id == TRACER_MOTOR4_ID)
-            buf[4] = UART_FRAME_MOTOR4_DRIVER_STATUS_ID;
         buf[5] = msg->motor_driver_status_msg.data.status.current.high_byte;
         buf[6] = msg->motor_driver_status_msg.data.status.current.low_byte;
         buf[7] = msg->motor_driver_status_msg.data.status.rpm.high_byte;
@@ -584,34 +580,6 @@ bool ConstructStatusMessage(TracerStatusMessage *msg)
     {
         msg->msg_type = TracerMotorDriverStatusMsg;
         msg->motor_driver_status_msg.motor_id = TRACER_MOTOR2_ID;
-        msg->motor_driver_status_msg.data.status.current.high_byte = payload_buffer[0];
-        msg->motor_driver_status_msg.data.status.current.low_byte = payload_buffer[1];
-        msg->motor_driver_status_msg.data.status.rpm.high_byte = payload_buffer[2];
-        msg->motor_driver_status_msg.data.status.rpm.low_byte = payload_buffer[3];
-        msg->motor_driver_status_msg.data.status.temperature = payload_buffer[4];
-        msg->motor_driver_status_msg.data.status.reserved0 = 0x00;
-        msg->motor_driver_status_msg.data.status.count = frame_cnt;
-        msg->motor_driver_status_msg.data.status.checksum = frame_checksum;
-        break;
-    }
-    case UART_FRAME_MOTOR3_DRIVER_STATUS_ID:
-    {
-        msg->msg_type = TracerMotorDriverStatusMsg;
-        msg->motor_driver_status_msg.motor_id = TRACER_MOTOR3_ID;
-        msg->motor_driver_status_msg.data.status.current.high_byte = payload_buffer[0];
-        msg->motor_driver_status_msg.data.status.current.low_byte = payload_buffer[1];
-        msg->motor_driver_status_msg.data.status.rpm.high_byte = payload_buffer[2];
-        msg->motor_driver_status_msg.data.status.rpm.low_byte = payload_buffer[3];
-        msg->motor_driver_status_msg.data.status.temperature = payload_buffer[4];
-        msg->motor_driver_status_msg.data.status.reserved0 = 0x00;
-        msg->motor_driver_status_msg.data.status.count = frame_cnt;
-        msg->motor_driver_status_msg.data.status.checksum = frame_checksum;
-        break;
-    }
-    case UART_FRAME_MOTOR4_DRIVER_STATUS_ID:
-    {
-        msg->msg_type = TracerMotorDriverStatusMsg;
-        msg->motor_driver_status_msg.motor_id = TRACER_MOTOR4_ID;
         msg->motor_driver_status_msg.data.status.current.high_byte = payload_buffer[0];
         msg->motor_driver_status_msg.data.status.current.low_byte = payload_buffer[1];
         msg->motor_driver_status_msg.data.status.rpm.high_byte = payload_buffer[2];

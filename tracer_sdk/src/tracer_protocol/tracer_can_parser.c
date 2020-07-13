@@ -55,22 +55,6 @@ bool DecodeTracerStatusMsgFromCAN(const struct can_frame *rx_frame, TracerStatus
         memcpy(msg->motor_driver_status_msg.data.raw, rx_frame->data, rx_frame->can_dlc * sizeof(uint8_t));
         break;
     }
-//    case CAN_MSG_MOTOR3_DRIVER_STATUS_ID:
-//    {
-//        msg->msg_type = TracerMotorDriverStatusMsg;
-//        // msg->motor_driver_status_msg.id = CAN_MSG_MOTOR3_DRIVER_STATUS_ID;
-//        msg->motor_driver_status_msg.motor_id = TRACER_MOTOR3_ID;
-//        memcpy(msg->motor_driver_status_msg.data.raw, rx_frame->data, rx_frame->can_dlc * sizeof(uint8_t));
-//        break;
-//    }
-//    case CAN_MSG_MOTOR4_DRIVER_STATUS_ID:
-//    {
-//        msg->msg_type = TracerMotorDriverStatusMsg;
-//        // msg->motor_driver_status_msg.id = CAN_MSG_MOTOR4_DRIVER_STATUS_ID;
-//        msg->motor_driver_status_msg.motor_id = TRACER_MOTOR4_ID;
-//        memcpy(msg->motor_driver_status_msg.data.raw, rx_frame->data, rx_frame->can_dlc * sizeof(uint8_t));
-//        break;
-//    }
     default:
         break;
     }
@@ -138,11 +122,6 @@ void EncodeTracerStatusMsgToCAN(const TracerStatusMessage *msg, struct can_frame
             tx_frame->can_id = CAN_MSG_MOTOR1_DRIVER_STATUS_ID;
         else if (msg->motor_driver_status_msg.motor_id == TRACER_MOTOR2_ID)
             tx_frame->can_id = CAN_MSG_MOTOR2_DRIVER_STATUS_ID;
-        else if (msg->motor_driver_status_msg.motor_id == TRACER_MOTOR3_ID)
-            tx_frame->can_id = CAN_MSG_MOTOR3_DRIVER_STATUS_ID;
-
-        else if (msg->motor_driver_status_msg.motor_id == TRACER_MOTOR4_ID)
-            tx_frame->can_id = CAN_MSG_MOTOR4_DRIVER_STATUS_ID;
         tx_frame->can_dlc = 8;
         memcpy(tx_frame->data, msg->motor_driver_status_msg.data.raw, tx_frame->can_dlc);
         break;
