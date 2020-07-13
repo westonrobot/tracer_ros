@@ -22,8 +22,8 @@ extern "C" {
 
 #define TRACER_MOTOR1_ID                 ((uint8_t)0x00)
 #define TRACER_MOTOR2_ID                 ((uint8_t)0x01)
-#define TRACER_MOTOR3_ID                 ((uint8_t)0x02)
-#define TRACER_MOTOR4_ID                 ((uint8_t)0x03)
+//#define TRACER_MOTOR3_ID                 ((uint8_t)0x02)
+//#define TRACER_MOTOR4_ID                 ((uint8_t)0x03)
 
 // UART Definitions
 #define UART_FRAME_SYSTEM_STATUS_ID         ((uint8_t)0x01)
