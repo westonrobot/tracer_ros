@@ -61,8 +61,8 @@ extern "C" {
 #define FAULT_CLR_BAT_OVER_VOL          ((uint8_t)0x02)
 #define FAULT_CLR_MOTOR1_COMM           ((uint8_t)0x03)
 #define FAULT_CLR_MOTOR2_COMM           ((uint8_t)0x04)
-#define FAULT_CLR_MOTOR3_COMM           ((uint8_t)0x05)
-#define FAULT_CLR_MOTOR4_COMM           ((uint8_t)0x06)
+//#define FAULT_CLR_MOTOR3_COMM           ((uint8_t)0x05)
+//#define FAULT_CLR_MOTOR4_COMM           ((uint8_t)0x06)
 #define FAULT_CLR_MOTOR_DRV_OVERHEAT    ((uint8_t)0x07)
 #define FAULT_CLR_MOTOR_OVERCURRENT     ((uint8_t)0x08)
 
@@ -93,8 +93,8 @@ extern "C" {
 #define FAULT_BAT_OVER_VOL_F            ((uint16_t)0x0002)
 #define FAULT_MOTOR1_COMM_F             ((uint16_t)0x0004)
 #define FAULT_MOTOR2_COMM_F             ((uint16_t)0x0008)
-#define FAULT_MOTOR3_COMM_F             ((uint16_t)0x0010)
-#define FAULT_MOTOR4_COMM_F             ((uint16_t)0x0020)
+//#define FAULT_MOTOR3_COMM_F             ((uint16_t)0x0010)
+//#define FAULT_MOTOR4_COMM_F             ((uint16_t)0x0020)
 #define FAULT_MOTOR_DRV_OVERHEAT_F      ((uint16_t)0x0040)
 #define FAULT_MOTOR_OVERCURRENT_F       ((uint16_t)0x0080)
 
