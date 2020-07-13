@@ -38,15 +38,15 @@ extern "C" {
 #define UART_FRAME_LIGHT_CONTROL_ID         ((uint8_t)0x02)
 
 // CAN Definitions
-#define CAN_MSG_MOTION_CONTROL_CMD_ID       ((uint32_t)0x130)
-#define CAN_MSG_MOTION_CONTROL_STATUS_ID    ((uint32_t)0x131)
-#define CAN_MSG_LIGHT_CONTROL_CMD_ID        ((uint32_t)0x140)
-#define CAN_MSG_LIGHT_CONTROL_STATUS_ID     ((uint32_t)0x141)
+#define CAN_MSG_MOTION_CONTROL_CMD_ID       ((uint32_t)0x111)
+#define CAN_MSG_MOTION_CONTROL_STATUS_ID    ((uint32_t)0x221)
+#define CAN_MSG_LIGHT_CONTROL_CMD_ID        ((uint32_t)0x121)
+#define CAN_MSG_LIGHT_CONTROL_STATUS_ID     ((uint32_t)0x231)
 #define CAN_MSG_SYSTEM_STATUS_STATUS_ID     ((uint32_t)0x151)
 #define CAN_MSG_MOTOR1_DRIVER_STATUS_ID     ((uint32_t)0x200)
 #define CAN_MSG_MOTOR2_DRIVER_STATUS_ID     ((uint32_t)0x201)
-#define CAN_MSG_MOTOR3_DRIVER_STATUS_ID     ((uint32_t)0x202)
-#define CAN_MSG_MOTOR4_DRIVER_STATUS_ID     ((uint32_t)0x203)
+//#define CAN_MSG_MOTOR3_DRIVER_STATUS_ID     ((uint32_t)0x202)
+//#define CAN_MSG_MOTOR4_DRIVER_STATUS_ID     ((uint32_t)0x203)
 
 /*--------------------- Control/State Constants ------------------------*/
 
