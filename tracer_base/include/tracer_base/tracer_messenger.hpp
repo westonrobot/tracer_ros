@@ -20,6 +20,8 @@
 #include "tracer_msgs/TracerLightCmd.h"
 #include "tracer_sdk/tracer_base.hpp"
 
+#include "wrp_sdk/platforms/tracer/tracer_base.hpp"
+
 namespace wescore
 {
 class TracerROSMessenger

@@ -5,7 +5,7 @@
 #include <tf/transform_broadcaster.h>
 #include <nav_msgs/Odometry.h>
 
-#include "tracer_sdk/tracer_base.hpp"
+//#include "tracer_sdk/tracer_base.hpp"
 #include "tracer_base/tracer_messenger.hpp"
 
 using namespace wescore;
@@ -35,8 +35,8 @@ int main(int argc, char **argv)
     }
     else
     {
-        robot.Connect(port_name, 115200);
-        ROS_INFO("Using UART to talk with the robot");
+      ROS_ERROR("Only CAN bus interface is supported for now");
+      return -1;
     }
     messenger.SetupSubscription();
 
