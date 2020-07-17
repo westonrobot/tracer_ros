@@ -13,7 +13,7 @@
 
 #include "tracer_msgs/TracerStatus.h"
 
-namespace wescore
+namespace westonrobot
 {
 TracerROSMessenger::TracerROSMessenger(ros::NodeHandle *nh) : tracer_(nullptr), nh_(nh)
 {

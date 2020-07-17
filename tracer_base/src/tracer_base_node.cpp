@@ -8,7 +8,7 @@
 //#include "tracer_sdk/tracer_base.hpp"
 #include "tracer_base/tracer_messenger.hpp"
 
-using namespace wescore;
+using namespace westonrobot;
 
 int main(int argc, char **argv)
 {

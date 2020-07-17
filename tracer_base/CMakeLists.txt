@@ -15,9 +15,10 @@ find_package(catkin REQUIRED COMPONENTS
     std_msgs
     geometry_msgs
     tracer_msgs
-    tracer_sdk
+   #tracer_sdk
     tf2 
     tf2_ros
+    wrp_sdk
 )
     
 # find_package(Boost REQUIRED COMPONENTS chrono)
@@ -29,7 +30,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES tracer_messenger
-  CATKIN_DEPENDS tracer_msgs roscpp sensor_msgs tracer_sdk
+  CATKIN_DEPENDS tracer_msgs roscpp sensor_msgs
 #   DEPENDS Boost
 )
 

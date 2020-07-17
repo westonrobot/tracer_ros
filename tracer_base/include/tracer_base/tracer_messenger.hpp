@@ -18,12 +18,13 @@
 #include <tf2_ros/transform_broadcaster.h>
 
 #include "tracer_msgs/TracerLightCmd.h"
-#include "tracer_sdk/tracer_base.hpp"
+//#include "tracer_sdk/tracer_base.hpp"
 
 #include "wrp_sdk/platforms/tracer/tracer_base.hpp"
 
-namespace wescore
+namespace westonrobot
 {
+
 class TracerROSMessenger
 {
 public:
