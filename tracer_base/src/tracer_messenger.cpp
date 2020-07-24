@@ -166,7 +166,6 @@ void TracerROSMessenger::PublishStateToROS()
     status_msg.front_light_state.custom_value = state.front_light_state.custom_value;
     status_msg.rear_light_state.mode = state.rear_light_state.mode;
     status_msg.rear_light_state.custom_value = state.front_light_state.custom_value;
-
     status_publisher_.publish(status_msg);
 
     // publish odometry and tf
