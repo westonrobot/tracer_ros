@@ -15,11 +15,11 @@ float64 angular_velocity
 # base state
 uint8 base_state
 uint8 control_mode
-uint16 fault_code
+uint8 fault_code
 float64 battery_voltage
 
 # motor state
-TracerMotorState[4] motor_states
+TracerMotorState[2] motor_states
 
 # light state
 bool light_control_enabled

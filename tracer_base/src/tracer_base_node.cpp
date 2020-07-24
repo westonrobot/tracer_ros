@@ -4,8 +4,6 @@
 #include <sensor_msgs/JointState.h>
 #include <tf/transform_broadcaster.h>
 #include <nav_msgs/Odometry.h>
-
-//#include "tracer_sdk/tracer_base.hpp"
 #include "tracer_base/tracer_messenger.hpp"
 
 using namespace westonrobot;

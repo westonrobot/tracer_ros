@@ -14,12 +14,9 @@
 
 #include <ros/ros.h>
 #include <nav_msgs/Odometry.h>
-// #include <tf/transform_broadcaster.h>
 #include <tf2_ros/transform_broadcaster.h>
 
 #include "tracer_msgs/TracerLightCmd.h"
-//#include "tracer_sdk/tracer_base.hpp"
-
 #include "wrp_sdk/platforms/tracer/tracer_base.hpp"
 
 namespace westonrobot

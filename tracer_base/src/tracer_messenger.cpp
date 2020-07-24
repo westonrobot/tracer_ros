@@ -154,7 +154,7 @@ void TracerROSMessenger::PublishStateToROS()
     status_msg.fault_code = state.fault_code;
     status_msg.battery_voltage = state.battery_voltage;
 
-    for (int i = 0; i < 4; ++i)
+    for (int i = 0; i < 2; ++i)
     {
         status_msg.motor_states[i].current = state.motor_states[i].current;
         status_msg.motor_states[i].rpm = state.motor_states[i].rpm;
