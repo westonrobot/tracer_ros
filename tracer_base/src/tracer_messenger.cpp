@@ -153,6 +153,8 @@ void TracerROSMessenger::PublishStateToROS()
     status_msg.control_mode = state.control_mode;
     status_msg.fault_code = state.fault_code;
     status_msg.battery_voltage = state.battery_voltage;
+    status_msg.right_odomter=state.right_odomter;
+    status_msg.left_odomter=state.left_odomter;
 
     for (int i = 0; i < 2; ++i)
     {
@@ -164,8 +166,6 @@ void TracerROSMessenger::PublishStateToROS()
     status_msg.light_control_enabled = state.light_control_enabled;
     status_msg.front_light_state.mode = state.front_light_state.mode;
     status_msg.front_light_state.custom_value = state.front_light_state.custom_value;
-    //status_msg.rear_light_state.mode = state.rear_light_state.mode;
-    //status_msg.rear_light_state.custom_value = state.front_light_state.custom_value;
     status_publisher_.publish(status_msg);
 
     // publish odometry and tf
@@ -207,7 +207,6 @@ void TracerROSMessenger::PublishSimStateToROS(double linear, double angular)
     // status_msg.rear_light_state.custom_value = state.front_light_state.custom_value;
 
     status_publisher_.publish(status_msg);
-
     // publish odometry and tf
     PublishOdometryToROS(linear, angular, dt);
 }

@@ -24,4 +24,7 @@ TracerMotorState[2] motor_states
 # light state
 bool light_control_enabled
 TracerLightState front_light_state
-TracerLightState rear_light_state
+
+#odometer state
+float64 left_odomter
+float64 right_odomter
