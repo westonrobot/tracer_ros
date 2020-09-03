@@ -158,9 +158,9 @@ void TracerROSMessenger::PublishStateToROS()
 
     for (int i = 0; i < 2; ++i)
     {
-        status_msg.motor_states[i].current = state.motor_states[i].current;
+        //status_msg.motor_states[i].current = state.motor_states[i].current;
         status_msg.motor_states[i].rpm = state.motor_states[i].rpm;
-        status_msg.motor_states[i].temperature = state.motor_states[i].temperature;
+       // status_msg.motor_states[i].temperature = state.motor_states[i].temperature;
     }
 
     status_msg.light_control_enabled = state.light_control_enabled;
